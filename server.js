@@ -1,6 +1,7 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
+import cors from "cors";
 const { info } = require("console");
 let express = require("express"),
   path = require("path"),
@@ -8,6 +9,8 @@ let express = require("express"),
   bodyParser = require("body-parser");
 
 let app = express();
+
+app.use(cors());
 
 app.use(express.static("src"));
 
