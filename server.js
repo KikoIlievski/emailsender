@@ -1,7 +1,7 @@
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
-import cors from "cors";
+let cors = require("cors");
 const { info } = require("console");
 let express = require("express"),
   path = require("path"),
